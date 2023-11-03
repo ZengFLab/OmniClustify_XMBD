@@ -1,0 +1,34 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--sup-data-file", "/home/zfeng/zfeng/Dose_usage/dose_usage.txt",
+                "--sup-condition-file", "/home/zfeng/zfeng/Dose_usage/dose_usage_phenotype_v2.txt",
+                "--sup-condition2-file", "/home/zfeng/zfeng/Dose_usage/dose_usage_uwv.txt",
+                "-lr", "0.001",
+                "-n", "30",
+                "-bs", "1000",
+                "-plf","none",
+                "-paf","none",
+                "--layer-dropout-rate", "0.1",
+                "-hl", "1000", "500",
+                "-zd", "300",
+                "-zi", "exact",
+                "-likeli", "negbinomial",
+                "--condition-type", "real",
+                "--condition2-type", "onehot",
+                "--save-model", "FM01_model.pth"
+            ]
+        }
+    ]
+}
